@@ -1,0 +1,10 @@
+.popup-content {
+  width: 80%;
+  height: 25vh;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  border: none;
+  padding: 18px;
+  border-radius: 5px;
+}
