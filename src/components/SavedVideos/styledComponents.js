@@ -112,7 +112,7 @@ export const SavedViews = styled.div`
   margin-top: ${props => props.mt};
 `
 
-export const SavedListHeading = styled.h1`
+export const SavedListHeading = styled.p`
   margin: 0px;
   font-family: 'Roboto';
   font-size: 20px;

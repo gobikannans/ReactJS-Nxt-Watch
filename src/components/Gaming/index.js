@@ -125,7 +125,7 @@ class Gaming extends Component {
               case apiStatusConstants.inProgress:
                 return <LoaderView />
               case apiStatusConstants.failure:
-                return <FailureView refresh={this.getVideosData()} />
+                return <FailureView refresh={this.getVideosData} />
               default:
                 return null
             }

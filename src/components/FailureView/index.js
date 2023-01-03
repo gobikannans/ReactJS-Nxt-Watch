@@ -14,10 +14,6 @@ const FailureView = props => {
       {value => {
         const {activeTheme} = value
 
-        const onRefresh = () => {
-          refresh.refresh()
-        }
-
         const ErrorImg =
           activeTheme === 'light'
             ? 'https://assets.ccbp.in/frontend/react-js/nxt-watch-failure-view-light-theme-img.png'
@@ -33,10 +29,10 @@ const FailureView = props => {
               Oops! Something Went Wrong
             </FailureHeading>
             <FailurePara color={paraColor}>
-              We are having some trouble to complete your request.Please try
+              We are having some trouble to complete your request. Please try
               again.
             </FailurePara>
-            <RetryBtn onClick={onRefresh}>Retry</RetryBtn>
+            <RetryBtn onClick={refresh}>Retry</RetryBtn>
           </FailureContainer>
         )
       }}

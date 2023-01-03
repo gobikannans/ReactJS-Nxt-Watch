@@ -173,7 +173,7 @@ class VideoItemDetails extends Component {
         </div>
 
         <ChannelContainer>
-          <ChannelImg src={profileImg} />
+          <ChannelImg src={profileImg} alt="channel logo" />
           <ChannelDetails>
             <VideoHeading color={headingColor} mt="0px">
               {name}
@@ -211,7 +211,7 @@ class VideoItemDetails extends Component {
               case apiStatusConstants.inProgress:
                 return <LoaderView />
               case apiStatusConstants.failure:
-                return <FailureView refresh={this.getVideoItemData()} />
+                return <FailureView refresh={this.getVideoItemData} />
               default:
                 return null
             }

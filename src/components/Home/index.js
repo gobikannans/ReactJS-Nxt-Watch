@@ -107,7 +107,7 @@ class Home extends Component {
   }
 
   onRetry = () => {
-    this.onClickSearch()
+    this.getVideosData()
   }
 
   renderHomeBanner = () => {
@@ -213,7 +213,7 @@ class Home extends Component {
               case apiStatusConstants.inProgress:
                 return <LoaderView />
               case apiStatusConstants.failure:
-                return <FailureView refresh={this.getVideosData()} />
+                return <FailureView refresh={this.getVideosData} />
               default:
                 return null
             }

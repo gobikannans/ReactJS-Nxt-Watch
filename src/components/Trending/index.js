@@ -1,9 +1,10 @@
 import {Component} from 'react'
 import {Link} from 'react-router-dom'
-
 import Cookies from 'js-cookie'
-
 import {HiFire} from 'react-icons/hi'
+import LoaderView from '../LoaderView'
+import FailureView from '../FailureView'
+import AppTheme from '../../context/AppTheme'
 
 import {
   TrendingContainer,
@@ -26,11 +27,6 @@ import {
 
 import './index.css'
 
-import LoaderView from '../LoaderView'
-import FailureView from '../FailureView'
-
-import AppTheme from '../../context/AppTheme'
-
 const apiStatusConstants = {
   initial: 'INITIAL',
   success: 'SUCCESS',
@@ -39,7 +35,7 @@ const apiStatusConstants = {
 }
 
 class Trending extends Component {
-  state = {videoList: '', apiStatus: apiStatusConstants.initial}
+  state = {videoDataList: '', apiStatus: apiStatusConstants.initial}
 
   componentDidMount() {
     this.getVideosData()
@@ -77,7 +73,7 @@ class Trending extends Component {
         views: eachVideo.view_count,
       }))
       this.setState({
-        videoList: fetchedData,
+        videoDataList: fetchedData,
         apiStatus: apiStatusConstants.success,
       })
     } else {
@@ -96,10 +92,10 @@ class Trending extends Component {
           const headingColor = activeTheme === 'light' ? ' #1e293b' : '#ffffff'
 
           const renderTrendingSuccessView = () => {
-            const {videoList} = this.state
+            const {videoDataList} = this.state
             return (
               <TrendingVideoList>
-                {videoList.map(eachThumbnail => (
+                {videoDataList.map(eachThumbnail => (
                   <Link
                     to={`/videos/${eachThumbnail.id}`}
                     className="trending-links"
@@ -165,7 +161,7 @@ class Trending extends Component {
               case apiStatusConstants.inProgress:
                 return <LoaderView />
               case apiStatusConstants.failure:
-                return <FailureView refresh={this.getVideosData()} />
+                return <FailureView refresh={this.getVideosData} />
               default:
                 return null
             }
