@@ -177,6 +177,7 @@ class Home extends Component {
                   inputColor={headingColor}
                 />
                 <SearchBtn
+                  type="button"
                   BgBtn={bgBtn}
                   onClick={this.onClickSearch}
                   data-testid="searchButton"

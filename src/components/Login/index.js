@@ -83,10 +83,11 @@ class Login extends Component {
       visibility,
     } = this.state
 
-    const jwtToken = Cookies.get('jwt_token')
-    if (jwtToken !== undefined) {
+    const token = Cookies.get('jwt_token')
+    if (token !== undefined) {
       return <Redirect to="/" />
     }
+
     return (
       <AppTheme.Consumer>
         {value => {

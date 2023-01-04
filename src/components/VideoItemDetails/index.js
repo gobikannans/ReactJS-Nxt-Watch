@@ -38,7 +38,6 @@ const apiStatusConstants = {
 class VideoItemDetails extends Component {
   state = {
     videoItemList: '',
-    channelDataList: '',
     apiStatus: apiStatusConstants.initial,
     isLiked: false,
     isDisliked: false,
@@ -78,6 +77,7 @@ class VideoItemDetails extends Component {
         channel: {
           name: fetchedData.channel.name,
           profileImg: fetchedData.channel.profile_image_url,
+          count: fetchedData.channel.subscriber_count,
         },
         description: fetchedData.description,
         id: fetchedData.id,
@@ -87,14 +87,9 @@ class VideoItemDetails extends Component {
         videoUrl: fetchedData.video_url,
         views: fetchedData.view_count,
       }
-      const channelData = {
-        name: fetchedData.channel.name,
-        profileImg: fetchedData.channel.profile_image_url,
-        count: fetchedData.channel.subscriber_count,
-      }
+
       this.setState({
         videoItemList: convertedData,
-        channelDataList: channelData,
         apiStatus: apiStatusConstants.success,
       })
     } else {
@@ -120,8 +115,9 @@ class VideoItemDetails extends Component {
   }
 
   renderVideoSuccessView = (headingColor, addSavedVideos, savedVideos) => {
-    const {videoItemList, channelDataList, isLiked, isDisliked} = this.state
-    const {description, views, videoUrl, date, title} = videoItemList
+    const {videoItemList, isLiked, isDisliked} = this.state
+    const {description, views, videoUrl, date, title, channel} = videoItemList
+    const {name, profileImg, count} = channel
 
     const isSave =
       savedVideos.filter(eachVideo => eachVideo.id === videoItemList.id)
@@ -129,7 +125,6 @@ class VideoItemDetails extends Component {
 
     console.log(isSave)
 
-    const {name, profileImg, count} = channelDataList
     const dateInWord = formatDistanceToNow(new Date(date))
 
     const activeLikeColor = isLiked ? '#2563eb ' : '#64748b'

@@ -74,29 +74,25 @@ export const SavedDetails = styled.div`
   margin-left: 15px;
   margin-right: 5px;
   line-height: 1.6;
-  width: 39%;
+  width: 40%;
   @media screen and (max-width: 576px) {
     width: 100%;
     margin-left: 0px;
+    display: flex;
+    align-items: center;
   }
 `
-export const SmallSavedContainer = styled.div`
+
+export const ChannelImg = styled.img`
   display: none;
 
   @media screen and (max-width: 576px) {
     display: flex;
-    margin-top: 10px;
+    width: 10%;
+    height: 30%;
+    margin-top: 3px;
+    margin-right: 10px;
   }
-`
-
-export const SmallSavedViews = styled.div`
-  display: flex;
-`
-
-export const ChannelImg = styled.img`
-  width: 10%;
-  height: 10%;
-  margin-right: 10px;
 `
 
 export const LargeSavedContainer = styled.div`
@@ -104,12 +100,20 @@ export const LargeSavedContainer = styled.div`
   flex-direction: column;
 
   @media screen and (max-width: 576px) {
-    display: none;
+    margin-top: 10px;
   }
 `
 export const SavedViews = styled.div`
   display: flex;
-  margin-top: ${props => props.mt};
+  flex-direction: column;
+
+  @media screen and (max-width: 576px) {
+    flex-direction: row;
+  }
+`
+export const SavedDateContainer = styled.div`
+  display: flex;
+  flex-direction: row;
 `
 
 export const SavedListHeading = styled.p`
@@ -131,10 +135,10 @@ export const SavedPara = styled.p`
   font-size: ${props => props.size};
   color: #7e858e;
   text-decoration: none;
-  margin-left: ${props => props.ml};
-
+  margin-left: ${props => props.mll};
   @media screen and (max-width: 576px) {
     font-size: 13px;
+    margin-left: ${props => props.ml};
   }
 `
 

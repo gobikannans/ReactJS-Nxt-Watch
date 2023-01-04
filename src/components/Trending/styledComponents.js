@@ -75,30 +75,25 @@ export const TrendingDetails = styled.div`
   margin-left: 15px;
   margin-right: 5px;
   line-height: 1.6;
-  width: 39%;
+  width: 48%;
   @media screen and (max-width: 576px) {
     width: 100%;
     margin-left: 0px;
+    display: flex;
+    align-items: center;
   }
 `
-export const SmallTrendingContainer = styled.div`
+
+export const ChannelImg = styled.img`
   display: none;
 
   @media screen and (max-width: 576px) {
     display: flex;
-    margin-top: 10px;
+    width: 10%;
+    height: 30%;
+    margin-top: 3px;
+    margin-right: 10px;
   }
-`
-
-export const SmallTrendingViews = styled.div`
-  display: flex;
-  align-items: center;
-`
-
-export const ChannelImg = styled.img`
-  width: 10%;
-  height: 10%;
-  margin-right: 10px;
 `
 
 export const LargeTrendingContainer = styled.div`
@@ -106,14 +101,23 @@ export const LargeTrendingContainer = styled.div`
   flex-direction: column;
 
   @media screen and (max-width: 576px) {
-    display: none;
+    margin-top: 10px;
   }
 `
 export const TrendingViews = styled.div`
   display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 576px) {
+    flex-direction: row;
+  }
+`
+export const TrendingDateContainer = styled.div`
+  display: flex;
+  flex-direction: row;
 `
 
-export const TrendingListHeading = styled.h1`
+export const TrendingListHeading = styled.p`
   margin: 0px;
   font-family: 'Roboto';
   font-size: 20px;
@@ -132,9 +136,10 @@ export const TrendingPara = styled.p`
   font-size: ${props => props.size};
   color: #7e858e;
   text-decoration: none;
-  margin-left: ${props => props.ml};
+  margin-left: ${props => props.mll};
 
   @media screen and (max-width: 576px) {
     font-size: 13px;
+    margin-left: ${props => props.ml};
   }
 `

@@ -24,6 +24,7 @@ export const ThumbnailImg = styled.img`
 export const ChannelViews = styled.div`
   display: flex;
   flex-direction: column;
+
   @media screen and (max-width: 576px) {
     display: flex;
   }
@@ -33,10 +34,6 @@ export const ChannelContainer = styled.div`
   display: flex;
   align-items: ${props => props.center};
   width: ${props => props.width};
-
-  @media screen and (max-width: 576px) {
-    margin-left: 10px;
-  }
 `
 
 export const ChannelDetails = styled.div`

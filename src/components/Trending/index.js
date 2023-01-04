@@ -2,6 +2,9 @@ import {Component} from 'react'
 import {Link} from 'react-router-dom'
 import Cookies from 'js-cookie'
 import {HiFire} from 'react-icons/hi'
+
+import {formatDistanceToNow} from 'date-fns'
+
 import LoaderView from '../LoaderView'
 import FailureView from '../FailureView'
 import AppTheme from '../../context/AppTheme'
@@ -19,9 +22,8 @@ import {
   TrendingListHeading,
   TrendingPara,
   LargeTrendingContainer,
-  SmallTrendingViews,
-  SmallTrendingContainer,
   ChannelImg,
+  TrendingDateContainer,
   TrendingViews,
 } from './styledComponents'
 
@@ -95,59 +97,51 @@ class Trending extends Component {
             const {videoDataList} = this.state
             return (
               <TrendingVideoList>
-                {videoDataList.map(eachThumbnail => (
-                  <Link
-                    to={`/videos/${eachThumbnail.id}`}
-                    className="trending-links"
-                  >
-                    <TrendingList key={eachThumbnail.id}>
-                      <TrendingImg
-                        src={eachThumbnail.thumbnailUrl}
-                        alt="video thumbnail"
-                      />
-                      <TrendingDetails>
-                        <SmallTrendingContainer>
-                          <ChannelImg src={eachThumbnail.channel.profileImg} />
-                          <div>
-                            <div>
+                {videoDataList.map(eachThumbnail => {
+                  const timeInWord = formatDistanceToNow(
+                    new Date(eachThumbnail.date),
+                  )
+                  console.log(timeInWord)
+                  return (
+                    <div key={eachThumbnail.id}>
+                      <Link
+                        to={`/videos/${eachThumbnail.id}`}
+                        className="trending-links"
+                      >
+                        <TrendingList>
+                          <TrendingImg
+                            src={eachThumbnail.thumbnailUrl}
+                            alt="video thumbnail"
+                          />
+                          <TrendingDetails>
+                            <ChannelImg
+                              src={eachThumbnail.channel.profileImg}
+                              alt="channel logo"
+                            />
+                            <LargeTrendingContainer>
                               <TrendingListHeading ListHeading={headingColor}>
                                 {eachThumbnail.title}
                               </TrendingListHeading>
-                            </div>
-                            <SmallTrendingViews>
-                              <TrendingPara color="#7e858e">
-                                {eachThumbnail.channel.name}
-                              </TrendingPara>
-                              <TrendingPara color="#7e858e" ml="5px">
-                                . {eachThumbnail.views} views .
-                              </TrendingPara>
-                              <TrendingPara color="#7e858e" ml="5px">
-                                {eachThumbnail.date}
-                              </TrendingPara>
-                            </SmallTrendingViews>
-                          </div>
-                        </SmallTrendingContainer>
-
-                        <LargeTrendingContainer>
-                          <TrendingListHeading ListHeading={headingColor}>
-                            {eachThumbnail.title}
-                          </TrendingListHeading>
-                          <TrendingPara>
-                            {eachThumbnail.channel.name}
-                          </TrendingPara>
-                          <TrendingViews>
-                            <TrendingPara>
-                              {eachThumbnail.views} views .
-                            </TrendingPara>
-                            <TrendingPara ml="5px">
-                              {eachThumbnail.date}
-                            </TrendingPara>
-                          </TrendingViews>
-                        </LargeTrendingContainer>
-                      </TrendingDetails>
-                    </TrendingList>
-                  </Link>
-                ))}
+                              <TrendingViews>
+                                <TrendingPara>
+                                  {eachThumbnail.channel.name}
+                                </TrendingPara>
+                                <TrendingDateContainer>
+                                  <TrendingPara ml="5px">
+                                    {eachThumbnail.views} views .
+                                  </TrendingPara>
+                                  <TrendingPara mll="5px" ml="5px">
+                                    {timeInWord} ago
+                                  </TrendingPara>
+                                </TrendingDateContainer>
+                              </TrendingViews>
+                            </LargeTrendingContainer>
+                          </TrendingDetails>
+                        </TrendingList>
+                      </Link>
+                    </div>
+                  )
+                })}
               </TrendingVideoList>
             )
           }

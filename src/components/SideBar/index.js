@@ -46,68 +46,72 @@ class SideBar extends Component {
 
           return (
             <HomeBarContainer bgColor={bgColor}>
-              <HomeBarItems>
-                <Link to="/" onClick={onActiveHome} className="nav-links">
-                  <HomeIcons bgColour={activeTab === 'HOME' ? bgColour : null}>
-                    <HiHome
-                      size={18}
-                      color={activeTab === 'HOME' ? 'red' : iconColor}
-                      className="nav-icons"
-                    />
-                    <ParaEl color={color}>Home</ParaEl>
-                  </HomeIcons>
-                </Link>
-                <Link
-                  to="/trending"
-                  onClick={onActiveTrending}
-                  className="nav-links"
-                >
-                  <HomeIcons
-                    bgColour={activeTab === 'TRENDING' ? bgColour : null}
+              <nav>
+                <HomeBarItems>
+                  <Link to="/" onClick={onActiveHome} className="nav-links">
+                    <HomeIcons
+                      bgColour={activeTab === 'HOME' ? bgColour : null}
+                    >
+                      <HiHome
+                        size={18}
+                        color={activeTab === 'HOME' ? 'red' : iconColor}
+                        className="nav-icons"
+                      />
+                      <ParaEl color={color}>Home</ParaEl>
+                    </HomeIcons>
+                  </Link>
+                  <Link
+                    to="/trending"
+                    onClick={onActiveTrending}
+                    className="nav-links"
                   >
-                    <HiFire
-                      size={18}
-                      color={activeTab === 'TRENDING' ? 'red' : iconColor}
-                      className="nav-icons"
-                    />
-                    <ParaEl color={color}>Trending</ParaEl>
-                  </HomeIcons>
-                </Link>
+                    <HomeIcons
+                      bgColour={activeTab === 'TRENDING' ? bgColour : null}
+                    >
+                      <HiFire
+                        size={18}
+                        color={activeTab === 'TRENDING' ? 'red' : iconColor}
+                        className="nav-icons"
+                      />
+                      <ParaEl color={color}>Trending</ParaEl>
+                    </HomeIcons>
+                  </Link>
 
-                <Link
-                  to="/gaming"
-                  onClick={onActiveGaming}
-                  className="nav-links"
-                >
-                  <HomeIcons
-                    bgColour={activeTab === 'GAMING' ? bgColour : null}
+                  <Link
+                    to="/gaming"
+                    onClick={onActiveGaming}
+                    className="nav-links"
                   >
-                    <SiYoutubegaming
-                      size={18}
-                      color={activeTab === 'GAMING' ? 'red' : iconColor}
-                      className="nav-icons"
-                    />
-                    <ParaEl color={color}>Gaming</ParaEl>
-                  </HomeIcons>
-                </Link>
+                    <HomeIcons
+                      bgColour={activeTab === 'GAMING' ? bgColour : null}
+                    >
+                      <SiYoutubegaming
+                        size={18}
+                        color={activeTab === 'GAMING' ? 'red' : iconColor}
+                        className="nav-icons"
+                      />
+                      <ParaEl color={color}>Gaming</ParaEl>
+                    </HomeIcons>
+                  </Link>
 
-                <Link
-                  to="/saved-videos"
-                  onClick={onActiveSavedVideos}
-                  className="nav-links"
-                >
-                  <HomeIcons
-                    bgColour={activeTab === 'SAVEDVIDEOS' ? bgColour : null}
+                  <Link
+                    to="/saved-videos"
+                    onClick={onActiveSavedVideos}
+                    className="nav-links"
                   >
-                    <MdPlaylistAdd
-                      size={18}
-                      color={activeTab === 'SAVEDVIDEOS' ? 'red' : iconColor}
-                      className="nav-icons"
-                    />
-                    <ParaEl color={color}>Saved Videos</ParaEl>
-                  </HomeIcons>
-                </Link>
-              </HomeBarItems>
+                    <HomeIcons
+                      bgColour={activeTab === 'SAVEDVIDEOS' ? bgColour : null}
+                    >
+                      <MdPlaylistAdd
+                        size={18}
+                        color={activeTab === 'SAVEDVIDEOS' ? 'red' : iconColor}
+                        className="nav-icons"
+                      />
+                      <ParaEl color={color}>Saved Videos</ParaEl>
+                    </HomeIcons>
+                  </Link>
+                </HomeBarItems>
+              </nav>
               <ContactUs />
             </HomeBarContainer>
           )

@@ -13,13 +13,12 @@ import {
   SavedVideoList,
   SavedList,
   SavedImg,
-  SmallSavedContainer,
-  SmallSavedViews,
   ChannelImg,
   SavedViews,
   SavedListHeading,
   SavedDetails,
   SavedPara,
+  SavedDateContainer,
   LargeSavedContainer,
   SavedFailureContainer,
   SavedFailureImg,
@@ -66,46 +65,38 @@ class SavedVideos extends Component {
               const timeInWord = formatDistanceToNow(new Date(eachVideo.date))
               console.log(timeInWord)
               return (
-                <Link to={`/videos/${eachVideo.id}`} className="saved-links">
-                  <SavedList key={eachVideo.id}>
-                    <SavedImg
-                      src={eachVideo.thumbnailUrl}
-                      alt="video thumbnail"
-                    />
-                    <SavedDetails>
-                      <SmallSavedContainer>
-                        <ChannelImg src={eachVideo.channel.profileImg} />
-                        <div>
+                <div key={eachVideo.id}>
+                  <Link to={`/videos/${eachVideo.id}`} className="saved-links">
+                    <SavedList>
+                      <SavedImg
+                        src={eachVideo.thumbnailUrl}
+                        alt="video thumbnail"
+                      />
+                      <SavedDetails>
+                        <ChannelImg
+                          src={eachVideo.channel.profileImg}
+                          alt="channel logo"
+                        />
+                        <LargeSavedContainer>
                           <SavedListHeading ListHeading={headingColor}>
                             {eachVideo.title}
                           </SavedListHeading>
-                          <SmallSavedViews>
-                            <SavedPara color="#7e858e">
-                              {eachVideo.channel.name}
-                            </SavedPara>
-                            <SavedPara color="#7e858e" ml="5px">
-                              . {eachVideo.views} views .
-                            </SavedPara>
-                            <SavedPara color="#7e858e" ml="5px">
-                              {eachVideo.date}
-                            </SavedPara>
-                          </SmallSavedViews>
-                        </div>
-                      </SmallSavedContainer>
-
-                      <LargeSavedContainer>
-                        <SavedListHeading ListHeading={headingColor}>
-                          {eachVideo.title}
-                        </SavedListHeading>
-                        <SavedPara>{eachVideo.channel.name}</SavedPara>
-                        <SavedViews mt="3px">
-                          <SavedPara>{eachVideo.views} views .</SavedPara>
-                          <SavedPara ml="5px">{timeInWord}</SavedPara>
-                        </SavedViews>
-                      </LargeSavedContainer>
-                    </SavedDetails>
-                  </SavedList>
-                </Link>
+                          <SavedViews>
+                            <SavedPara>{eachVideo.channel.name}</SavedPara>
+                            <SavedDateContainer>
+                              <SavedPara ml="5px">
+                                {eachVideo.views} views .
+                              </SavedPara>
+                              <SavedPara mll="5px" ml="5px">
+                                {timeInWord} ago
+                              </SavedPara>
+                            </SavedDateContainer>
+                          </SavedViews>
+                        </LargeSavedContainer>
+                      </SavedDetails>
+                    </SavedList>
+                  </Link>
+                </div>
               )
             })}
           </SavedVideoList>

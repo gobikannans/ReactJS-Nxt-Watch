@@ -32,7 +32,9 @@ const FailureView = props => {
               We are having some trouble to complete your request. Please try
               again.
             </FailurePara>
-            <RetryBtn onClick={refresh}>Retry</RetryBtn>
+            <RetryBtn type="button" onClick={refresh}>
+              Retry
+            </RetryBtn>
           </FailureContainer>
         )
       }}

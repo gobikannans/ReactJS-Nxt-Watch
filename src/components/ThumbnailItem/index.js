@@ -1,4 +1,7 @@
 import {Link} from 'react-router-dom'
+
+import {formatDistanceToNow} from 'date-fns'
+
 import {
   ThumbnailList,
   ThumbnailImg,
@@ -22,6 +25,8 @@ const ThumbnailItem = props => {
       {value => {
         const {activeTheme} = value
         const color = activeTheme === 'light' ? '#313131' : '#f4f4f4'
+        const timeInWord = formatDistanceToNow(new Date(date))
+        console.log(timeInWord)
         return (
           <ThumbnailList>
             <Link to={`/videos/${id}`} className="video-links">
@@ -40,12 +45,12 @@ const ThumbnailItem = props => {
                     <ThumbnailPara size="16px" color="#7e858e">
                       {name}
                     </ThumbnailPara>
-                    <ChannelContainer center="center" width="70%">
+                    <ChannelContainer center="center" width="80%">
                       <ThumbnailPara size="16px" color="#7e858e">
                         {views} views .
                       </ThumbnailPara>
                       <ThumbnailPara size="16px" color="#7e858e" ml="5px">
-                        {date}
+                        {timeInWord} ago
                       </ThumbnailPara>
                     </ChannelContainer>
                   </ChannelViews>
