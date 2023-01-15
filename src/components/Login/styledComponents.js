@@ -11,7 +11,7 @@ export const LoginBgContainer = styled.div`
 
 export const LoginContainer = styled.div`
   width: 30%;
-  height: 58%;
+  height: 60%;
   border-radius: 5px;
   box-shadow: ${props => props.bs};
   padding: 30px;
@@ -89,6 +89,19 @@ export const LoginBtn = styled.button`
   border-radius: 5px;
   align-self: center;
   margin-top: 30px;
+  cursor: pointer;
+`
+
+export const GuestBtn = styled.button`
+  width: 100%;
+  padding: 10px;
+  background-color: #3b82f6;
+  color: #ffffff;
+  font-family: 'Roboto';
+  border: none;
+  border-radius: 5px;
+  align-self: center;
+  margin-top: 15px;
   cursor: pointer;
 `
 export const ErrorMsg = styled.p`
