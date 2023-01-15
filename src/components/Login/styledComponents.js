@@ -11,7 +11,6 @@ export const LoginBgContainer = styled.div`
 
 export const LoginContainer = styled.div`
   width: 30%;
-  height: 60%;
   border-radius: 5px;
   box-shadow: ${props => props.bs};
   padding: 30px;

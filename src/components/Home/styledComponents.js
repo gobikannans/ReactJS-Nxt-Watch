@@ -8,6 +8,10 @@ export const HomeBannerContainer = styled.div`
   height: 35vh;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 576px) {
+    margin-top: 20px;
+  }
 `
 export const HomeLogo = styled.img`
   width: 50%;
@@ -59,6 +63,7 @@ export const SearchContainer = styled.div`
   height: 5vh;
   width: 500px;
   border: 1px solid #909090;
+  margin-top: 20px;
 
   @media screen and (max-width: 576px) {
     width: 90%;

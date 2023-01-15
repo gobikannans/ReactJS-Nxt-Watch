@@ -8,3 +8,25 @@
   padding: 18px;
   border-radius: 5px;
 }
+
+.my-popup-content {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 5px;
+  height: 100vh;
+  width: 100%;
+  padding: 0px;
+}
+
+.small-nav {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .small-nav {
+    display: block;
+  }
+}

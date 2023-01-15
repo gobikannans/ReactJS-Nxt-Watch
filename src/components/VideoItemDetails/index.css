@@ -2,12 +2,14 @@
   width: 100% !important;
   height: 68vh !important;
   margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 @media screen and (max-width: 767px) {
   .react {
     width: 100% !important;
-    height: 40% !important;
+    height: 33% !important;
+    margin-top: 30px;
   }
 }
 

@@ -5,6 +5,11 @@ export const VideoContainer = styled.div`
   height: 115vh;
   width: 100%;
   background-color: ${props => props.bgColor};
+  overflow: auto;
+
+  @media screen and (max-width: 767px) {
+    padding: 10px;
+  }
 `
 
 export const VideoDetails = styled.div`
@@ -84,6 +89,7 @@ export const ChannelImg = styled.img`
 
   @media screen and (max-width: 767px) {
     width: 8%;
+    height: 45%;
   }
 `
 export const VideoPara = styled.p`
@@ -92,7 +98,7 @@ export const VideoPara = styled.p`
   color: ${props => props.color};
   margin-bottom: ${props => props.mb};
   font-weight: ${props => props.fw};
-  margin-left: 64px;
+  margin-left: 50px;
 
   @media screen and (max-width: 767px) {
     margin-left: 0px;

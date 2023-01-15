@@ -11,7 +11,12 @@ export const HeaderContainer = styled.nav`
   padding-right: 40px;
   position: fixed;
   width: 100%;
+
   @media screen and (max-width: 767px) {
+    height: 10vh;
+  }
+
+  @media screen and (max-width: 550px) {
     height: 13vh;
   }
 `
@@ -20,7 +25,7 @@ export const HeaderLogo = styled.img`
   width: 38%;
 
   @media screen and (max-width: 767px) {
-    width: 48%;
+    width: 50%;
   }
 `
 export const HeaderSubContainer = styled.ul`
@@ -106,4 +111,42 @@ export const ConfirmBtn = styled.button`
   width: 80px;
   height: 5vh;
   cursor: pointer;
+`
+
+export const HomeBarItems = styled.ul`
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  width: 100%;
+  padding: 0px;
+  margin-top: 20px;
+`
+
+export const HomeIcons = styled.li`
+  display: flex;
+  align-items: center;
+  background-color: ${props => props.bgColour};
+  width: 100%;
+`
+export const ParaEl = styled.p`
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 15px;
+  color: ${props => props.color};
+`
+export const SmallSideBarContainer = styled.div`
+  background-color: ${props => props.popupBg};
+  padding: 0px;
+  margin: 0px;
+  height: 100vh;
+  width: 50%;
+`
+
+export const CloseIcon = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  padding-right: 20px;
+  color: ${props => props.color};
 `

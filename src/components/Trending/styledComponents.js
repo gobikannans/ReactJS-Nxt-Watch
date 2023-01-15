@@ -11,8 +11,15 @@ export const TrendingNavbar = styled.div`
   padding-top: 30px;
   padding-left: 50px;
   background-color: ${props => props.navBg};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-self: flex-start;
   width: 100%;
+
+  @media screen and (max-width: 767px) {
+    height: 20vh;
+  }
 `
 
 export const TrendingCard = styled.div`

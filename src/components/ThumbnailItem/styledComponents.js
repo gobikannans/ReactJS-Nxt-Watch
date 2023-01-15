@@ -8,7 +8,7 @@ export const ThumbnailList = styled.li`
 
   @media screen and (max-width: 576px) {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
   @media screen and (min-width: 768px) {

@@ -19,6 +19,7 @@ export const HomeBarItems = styled.ul`
   justify-content: space-between;
   list-style-type: none;
   padding: 0px;
+  margin-top: 30px;
 `
 
 export const HomeIcons = styled.li`
