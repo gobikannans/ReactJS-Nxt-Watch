@@ -37,12 +37,6 @@ import {
 import './index.css'
 
 class Header extends Component {
-  state = {displayNav: false}
-
-  onClickNav = () => {
-    this.setState({displayNav: true})
-  }
-
   render() {
     return (
       <AppTheme.Consumer>
