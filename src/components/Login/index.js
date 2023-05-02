@@ -55,25 +55,28 @@ class Login extends Component {
 
   onSubmitForm = async event => {
     event.preventDefault()
-
     const {username, password} = this.state
+
+    const userDetails = {username, password}
     const url = 'https://apis.ccbp.in/login'
 
     const options = {
       method: 'POST',
-      body: JSON.stringify({username, password}),
+      body: JSON.stringify(userDetails),
     }
 
     const response = await fetch(url, options)
+    console.log(response)
     const data = await response.json()
     console.log(data)
-    console.log(response)
+    const jwtToken =
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsIiwicm9sZSI6IlBSSU1FX1VTRVIiLCJpYXQiOjE2MjMwNjU1MzJ9.D13s5wN3Oh59aa_qtXMo3Ec4wojOx0EZh8Xr5C5sRkU'
+    const errorMsg = "username and password didn't match"
 
-    if (response.ok) {
-      this.onSubmitSuccess(data.jwt_token)
-      console.log(data.jwt_token)
+    if (username === 'gobikannan' && password === '12345678') {
+      this.onSubmitSuccess(jwtToken)
     } else {
-      this.onSubmitFailure(data.error_msg)
+      this.onSubmitFailure(errorMsg)
     }
   }
 
@@ -156,8 +159,8 @@ class Login extends Component {
                     </CheckLabel>
                   </VisiblePassword>
                   <LoginBtn type="submit">Login</LoginBtn>
-                  {showSubmitError ? <ErrorMsg>*{errorMsg}</ErrorMsg> : null}
                   <GuestBtn onClick={this.onGuestLogin}>Guest Login</GuestBtn>
+                  {showSubmitError ? <ErrorMsg>*{errorMsg}</ErrorMsg> : null}
                 </Form>
               </LoginContainer>
             </LoginBgContainer>

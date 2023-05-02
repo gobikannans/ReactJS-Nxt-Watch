@@ -28,5 +28,6 @@
 @media screen and (max-width: 767px) {
   .small-nav {
     display: block;
+    width: 50%;
   }
 }

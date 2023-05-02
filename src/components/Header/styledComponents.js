@@ -82,6 +82,10 @@ export const PopupContainer = styled.div`
   width: 30%;
   border-radius: 5px;
 
+  @media screen and (max-width: 1024px) {
+    width: 50%;
+  }
+
   @media screen and (max-width: 767px) {
     width: 80%;
   }
@@ -90,6 +94,7 @@ export const LogoutWord = styled.p`
   color: ${props => props.color};
   font-family: 'Roboto';
   margin-bottom: 40px;
+  text-align: center; ;
 `
 export const CancelBtn = styled.button`
   color: #909090;

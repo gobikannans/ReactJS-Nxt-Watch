@@ -18,6 +18,10 @@ export const LoginContainer = styled.div`
   flex-direction: column;
   background-color: ${props => props.loginBg};
 
+  @media screen and (max-width: 1024px) {
+    width: 60%;
+  }
+
   @media screen and (max-width: 767px) {
     width: 80%;
   }

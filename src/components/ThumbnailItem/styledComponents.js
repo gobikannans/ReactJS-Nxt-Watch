@@ -2,9 +2,8 @@ import styled from 'styled-components'
 
 export const ThumbnailList = styled.li`
   width: 45%;
-  height: 50vh;
   margin-right: 15px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 
   @media screen and (max-width: 576px) {
     width: 100%;
@@ -13,7 +12,6 @@ export const ThumbnailList = styled.li`
 
   @media screen and (min-width: 768px) {
     width: 30%;
-    margin-right: 33px;
   }
 `
 
