@@ -28,7 +28,7 @@ export const ContactImg = styled.img`
 
 export const ContactParaEl = styled.p`
   font-family: 'Roboto';
-  font-size: 18px;
+  font-size: 16px;
   color: ${props => props.color};
   font-weight: 500;
   width: 80%;

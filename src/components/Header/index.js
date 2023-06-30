@@ -79,7 +79,7 @@ class Header extends Component {
 
           return (
             <HeaderContainer BgColor={`${BgColor}`}>
-              <Link to="/">
+              <Link to="/" className="logo-link">
                 <HeaderLogo
                   src={
                     activeTheme === 'light'
@@ -96,9 +96,9 @@ class Header extends Component {
                   data-testid="theme"
                 >
                   {activeTheme === 'light' ? (
-                    <BsMoon size={30} />
+                    <BsMoon size={25} />
                   ) : (
-                    <BsBrightnessHigh size={30} color="#ffffff" />
+                    <BsBrightnessHigh size={25} color="#ffffff" />
                   )}
                 </ButtonElLarge>
                 <ButtonElLarge border="none">
@@ -111,8 +111,8 @@ class Header extends Component {
                   modal
                   trigger={
                     <ButtonElLarge
-                      width="110px"
-                      padding="6px"
+                      width="90px"
+                      padding="5px"
                       border={
                         activeTheme === 'light'
                           ? '2px solid #3b82f6'
@@ -130,7 +130,7 @@ class Header extends Component {
                       <LogoutWord color={logoutColor}>
                         Are you sure, you want to logout?
                       </LogoutWord>
-                      <div>
+                      <div className="logout-btn-container">
                         <CancelBtn onClick={() => close()}>Cancel</CancelBtn>
                         <ConfirmBtn onClick={onClickLogout}>Confirm</ConfirmBtn>
                       </div>
@@ -146,9 +146,9 @@ class Header extends Component {
                   data-testid="theme"
                 >
                   {activeTheme === 'light' ? (
-                    <BsMoon size={28} />
+                    <BsMoon size={20} />
                   ) : (
-                    <BsBrightnessHigh size={28} color="#ffffff" />
+                    <BsBrightnessHigh size={20} color="#ffffff" />
                   )}
                 </ButtonElLarge>
 
@@ -161,7 +161,7 @@ class Header extends Component {
                         color={activeTheme === 'light' ? '#000000' : '#ffffff'}
                         onClick={this.onClickNav}
                       >
-                        <GiHamburgerMenu size={28} />
+                        <GiHamburgerMenu size={20} />
                       </ButtonElLarge>
                     }
                     className="my-popup"
@@ -280,7 +280,7 @@ class Header extends Component {
                       border="none"
                       color={activeTheme === 'light' ? '#000000' : '#ffffff'}
                     >
-                      <FiLogOut size={28} />
+                      <FiLogOut size={20} />
                     </ButtonElLarge>
                   }
                   className="popup-content"

@@ -7,25 +7,34 @@ export const HeaderContainer = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
   position: fixed;
   width: 100%;
 
   @media screen and (max-width: 767px) {
-    height: 10vh;
+    height: 12vh;
   }
 
   @media screen and (max-width: 550px) {
     height: 13vh;
   }
+
+  @media screen and (max-width: 400px) {
+    padding-left: 20px;
+    padding-right: 15px;
+  }
 `
 
 export const HeaderLogo = styled.img`
-  width: 38%;
+  width: 130px;
 
   @media screen and (max-width: 767px) {
-    width: 50%;
+    width: 110px;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 105px;
   }
 `
 export const HeaderSubContainer = styled.ul`
@@ -35,7 +44,6 @@ export const HeaderSubContainer = styled.ul`
   align-items: center;
 
   @media screen and (max-width: 767px) {
-    width: 80%;
     display: none;
   }
 `
@@ -47,14 +55,14 @@ export const SmallHeaderSubContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 28%;
+    width: 43%;
   }
 `
 
 export const ProfileLogo = styled.img`
-  width: 30%;
+  width: 24%;
 
-  @media screen and (max-width: 567px) {
+  @media screen and (max-width: 500px) {
     width: 68%;
   }
 `
@@ -94,7 +102,14 @@ export const LogoutWord = styled.p`
   color: ${props => props.color};
   font-family: 'Roboto';
   margin-bottom: 40px;
-  text-align: center; ;
+  text-align: center;
+  @media screen and (max-width: 767px) {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 14px;
+  }
 `
 export const CancelBtn = styled.button`
   color: #909090;
@@ -106,6 +121,11 @@ export const CancelBtn = styled.button`
   width: 80px;
   height: 5vh;
   cursor: pointer;
+
+  @media screen and (max-width: 400px) {
+    width: 60px;
+    font-size: 13px;
+  }
 `
 export const ConfirmBtn = styled.button`
   color: #ffffff;
@@ -116,6 +136,11 @@ export const ConfirmBtn = styled.button`
   width: 80px;
   height: 5vh;
   cursor: pointer;
+
+  @media screen and (max-width: 400px) {
+    width: 60px;
+    font-size: 13px;
+  }
 `
 
 export const HomeBarItems = styled.ul`

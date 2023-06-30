@@ -1,6 +1,6 @@
 .popup-content {
   width: 80%;
-  height: 25vh;
+  height: 28vh;
   background-color: transparent;
   display: flex;
   justify-content: center;
@@ -20,14 +20,33 @@
   height: 100vh;
   width: 100%;
   padding: 0px;
+  display: none;
 }
 
 .small-nav {
   display: none;
 }
+
+.logo-link {
+  width: 38%;
+}
+
 @media screen and (max-width: 767px) {
   .small-nav {
     display: block;
+  }
+  .my-popup-content {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .logo-link {
     width: 50%;
+  }
+
+  .popup-content {
+    width: 100%;
+    padding: 0px;
   }
 }

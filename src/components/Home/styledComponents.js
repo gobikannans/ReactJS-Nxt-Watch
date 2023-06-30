@@ -5,16 +5,29 @@ export const HomeBannerContainer = styled.div`
   background-size: cover;
   padding: 50px;
   width: 100%;
-  height: 35vh;
+  height: 50vh;
   display: flex;
   justify-content: space-between;
 
   @media screen and (max-width: 576px) {
     margin-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 `
 export const HomeLogo = styled.img`
-  width: 50%;
+  width: 180px;
+  margin-top: 10px;
+
+  @media screen and (max-width: 767px) {
+    width: 130px;
+    margin-top: 0px;
+  }
+
+  @media screen and (max-width: 400px) {
+    width: 130px;
+    margin-top: 0px;
+  }
 `
 export const HomeHeading = styled.p`
   font-family: 'Roboto';
@@ -23,6 +36,15 @@ export const HomeHeading = styled.p`
   font-weight: 400;
   margin-top: 20px;
   margin-bottom: 40px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
 `
 export const HomeBtn = styled.button`
   width: 130px;
@@ -33,6 +55,12 @@ export const HomeBtn = styled.button`
   color: #383838;
   background-color: transparent;
   border: 1px solid #383838;
+
+  @media screen and (max-width: 400px) {
+    width: 100px;
+    padding: 5px;
+    font-size: 13px;
+  }
 `
 export const BannerCloseBtn = styled.button`
   background-color: transparent;
@@ -94,6 +122,11 @@ export const ThumbnailContainer = styled.ul`
   padding: 0px;
   margin-top: 40px;
   width: 100%;
+
+  @media screen and (max-width: 576px) {
+    padding-right: 20px;
+    padding-left: 10px;
+  }
 `
 export const NoResultContainer = styled.div`
   display: flex;

@@ -2,14 +2,14 @@ import styled from 'styled-components'
 
 export const SavedContainer = styled.div`
   background-color: ${props => props.bgColor};
-  overflow: auto;
+  overflow-y: auto;
   height: 115vh;
 `
 
 export const SavedNavbar = styled.div`
   height: 18vh;
-  padding-top: 30px;
-  padding-left: 50px;
+  padding-top: 20px;
+  padding-left: 40px;
   background-color: ${props => props.navBg};
   display: flex;
   flex-direction: column;
@@ -19,6 +19,10 @@ export const SavedNavbar = styled.div`
 
   @media screen and (max-width: 767px) {
     height: 20vh;
+    padding-left: 30px;
+  }
+  @media screen and (max-width: 500px) {
+    padding-left: 25px;
   }
 `
 
@@ -29,14 +33,24 @@ export const SavedCard = styled.div`
 
 export const SavedIcon = styled.div`
   background-color: ${props => props.iconBg};
-  padding: 25px;
+  padding: 15px;
   border-radius: 38px;
   margin-right: 30px;
+
+  @media screen and (max-width: 767px) {
+    margin-right: 20px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 10px;
+    margin-right: 10px;
+  }
 `
 
 export const SavedHeading = styled.h1`
   color: ${props => props.color};
   font-family: 'Roboto';
+  font-size: 28px;
 
   @media screen and (max-width: 576px) {
     font-size: 25px;
@@ -49,11 +63,18 @@ export const SavedVideoList = styled.ul`
   list-style-type: none;
   margin-top: 50px;
   margin-left: 40px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
   width: 100%;
 
-  @media screen and (max-width: 776px) {
+  @media screen and (max-width: 767px) {
     margin-left: 0px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding-left: 20px;
   }
 `
 
@@ -61,6 +82,13 @@ export const SavedList = styled.li`
   width: 80%;
   margin-bottom: 80px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+
+  @media screen and (max-width: 1000px) {
+    width: 95%;
+  }
 
   @media screen and (max-width: 576px) {
     width: 100%;
@@ -131,6 +159,10 @@ export const SavedListHeading = styled.p`
   color: ${props => props.ListHeading};
   text-decoration: none;
 
+  @media screen and (max-width: 1000px) {
+    font-size: 18px;
+  }
+
   @media screen and (max-width: 576px) {
     font-size: 16px;
   }
@@ -143,6 +175,11 @@ export const SavedPara = styled.p`
   color: #7e858e;
   text-decoration: none;
   margin-left: ${props => props.mll};
+
+  @media screen and (max-width: 1000px) {
+    font-size: 14px;
+  }
+
   @media screen and (max-width: 576px) {
     font-size: 13px;
     margin-left: ${props => props.ml};
@@ -183,7 +220,7 @@ export const SavedFailurePara = styled.p`
   color: ${props => props.color};
 
   @media screen and (max-width: 576px) {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.6;
   }
 `

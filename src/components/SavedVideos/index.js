@@ -1,6 +1,6 @@
 import {Component} from 'react'
 import {Link} from 'react-router-dom'
-import {HiFire} from 'react-icons/hi'
+import {MdPlaylistAdd} from 'react-icons/md'
 
 import {formatDistanceToNow} from 'date-fns'
 
@@ -120,7 +120,7 @@ class SavedVideos extends Component {
               <SavedNavbar navBg={navBg}>
                 <SavedCard>
                   <SavedIcon iconBg={iconBg}>
-                    <HiFire size={30} color="#ff0000" />
+                    <MdPlaylistAdd size={30} color="#ff0000" />
                   </SavedIcon>
                   <SavedHeading color={headingColor}>Saved Videos</SavedHeading>
                 </SavedCard>

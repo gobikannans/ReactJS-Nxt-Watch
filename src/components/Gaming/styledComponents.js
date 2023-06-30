@@ -7,9 +7,9 @@ export const GamingContainer = styled.div`
 `
 
 export const GamingNavbar = styled.div`
-  height: 18vh;
-  padding-top: 30px;
-  padding-left: 50px;
+  height: 20vh;
+  padding-top: 20px;
+  padding-left: 40px;
   background-color: ${props => props.navBg};
   display: flex;
   flex-direction: column;
@@ -19,6 +19,7 @@ export const GamingNavbar = styled.div`
 
   @media screen and (max-width: 767px) {
     height: 20vh;
+    padding-left: 30px;
   }
 `
 
@@ -29,9 +30,14 @@ export const GamingCard = styled.div`
 
 export const GamingIcon = styled.div`
   background-color: ${props => props.iconBg};
-  padding: 25px;
+  padding: 15px;
   border-radius: 38px;
   margin-right: 30px;
+
+  @media screen and (max-width: 500px) {
+    padding: 15px;
+    margin-right: 10px;
+  }
 `
 
 export const GamingImg = styled.img`
@@ -45,7 +51,7 @@ export const GamingImg = styled.img`
 export const GamingHeading = styled.h1`
   color: ${props => props.color};
   font-family: 'Roboto';
-  font-size: ${props => props.size};
+  font-size: 28px;
 
   @media screen and (max-width: 576px) {
     font-size: 25px;
@@ -60,6 +66,7 @@ export const GamingVideoList = styled.ul`
   list-style-type: none;
   margin-top: 50px;
   padding-right: 20px;
+  padding-left: 20px;
   width: 100%;
 `
 export const GamingList = styled.li`
@@ -73,8 +80,10 @@ export const GamingList = styled.li`
 `
 
 export const GamingDetails = styled.div`
-  line-height: 1;
+  line-height: 0.8;
   width: 100%;
+  text-align: center;
+
   @media screen and (max-width: 576px) {
     width: 100%;
   }
@@ -84,6 +93,10 @@ export const GamingListHeading = styled.p`
   font-family: 'Roboto';
   font-size: 20px;
   color: ${props => props.listHeading};
+
+  @media screen and (max-width: 1000px) {
+    font-size: 18px;
+  }
 
   @media screen and (max-width: 576px) {
     font-size: 16px;
@@ -98,6 +111,11 @@ export const GamingPara = styled.p`
   color: #475569;
   text-decoration: none;
   margin-left: ${props => props.ml};
+  line-height: 1.3;
+
+  @media screen and (max-width: 1000px) {
+    font-size: 15px;
+  }
 
   @media screen and (max-width: 576px) {
     font-size: 13px;

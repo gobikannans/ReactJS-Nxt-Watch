@@ -92,6 +92,7 @@ export const LoginBtn = styled.button`
   border-radius: 5px;
   align-self: center;
   margin-top: 30px;
+  font-weight: 500;
   cursor: pointer;
 `
 
@@ -105,6 +106,7 @@ export const GuestBtn = styled.button`
   border-radius: 5px;
   align-self: center;
   margin-top: 15px;
+  font-weight: 500;
   cursor: pointer;
 `
 export const ErrorMsg = styled.p`

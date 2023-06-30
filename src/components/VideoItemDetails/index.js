@@ -142,13 +142,13 @@ class VideoItemDetails extends Component {
         <VideoHeading color={headingColor} mb="30px">
           {title}
         </VideoHeading>
-        <VideoDetails mb="30px">
+        <VideoDetails mb="30px" width="100%">
           <div>
             <DetailsPara size="15px" color="#7e858e">
               {views} views . {dateInWord} ago
             </DetailsPara>
           </div>
-          <VideoDetailsIcon width="20%">
+          <VideoDetailsIcon>
             <BtnContainer onClick={this.onClickLike}>
               <AiOutlineLike size={20} color={activeLikeColor} />
               <VideoBtn color={activeLikeColor}>Like</VideoBtn>

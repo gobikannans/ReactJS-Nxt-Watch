@@ -9,6 +9,7 @@ import {
   ChannelViews,
   ChannelDetails,
   ThumbnailPara,
+  ThumbnailViews,
 } from './styledComponents'
 
 import './index.css'
@@ -45,13 +46,13 @@ const ThumbnailItem = props => {
                     <ThumbnailPara size="16px" color="#7e858e">
                       {name}
                     </ThumbnailPara>
-                    <ChannelContainer center="center" width="80%">
-                      <ThumbnailPara size="16px" color="#7e858e">
+                    <ChannelContainer center="center" width="95%">
+                      <ThumbnailViews color="#7e858e">
                         {views} views .
-                      </ThumbnailPara>
-                      <ThumbnailPara size="16px" color="#7e858e" ml="5px">
+                      </ThumbnailViews>
+                      <ThumbnailViews color="#7e858e" ml="5px">
                         {timeInWord} ago
-                      </ThumbnailPara>
+                      </ThumbnailViews>
                     </ChannelContainer>
                   </ChannelViews>
                 </ChannelDetails>

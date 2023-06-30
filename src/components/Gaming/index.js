@@ -136,7 +136,7 @@ class Gaming extends Component {
               <GamingNavbar navBg={navBg}>
                 <GamingCard>
                   <GamingIcon iconBg={iconBg}>
-                    <SiYoutubegaming size={30} color="#ff0000" />
+                    <SiYoutubegaming size={25} color="#ff0000" />
                   </GamingIcon>
                   <GamingHeading color={headingColor}>Gaming</GamingHeading>
                 </GamingCard>

@@ -32,6 +32,10 @@ export const ChannelContainer = styled.div`
   display: flex;
   align-items: ${props => props.center};
   width: ${props => props.width};
+  font-size: ${props => props.size};
+
+  @media screen and (max-width: 1000px) {
+  }
 `
 
 export const ChannelDetails = styled.div`
@@ -47,4 +51,20 @@ export const ThumbnailPara = styled.p`
   color: ${props => props.color};
   text-decoration: none;
   margin-left: ${props => props.ml};
+
+  @media screen and (max-width: 1000px) {
+    font-size: 14px;
+  }
+`
+export const ThumbnailViews = styled.p`
+  margin: 0px;
+  font-family: 'Roboto';
+  font-size: ${props => props.size};
+  color: ${props => props.color};
+  text-decoration: none;
+  margin-left: ${props => props.ml};
+
+  @media screen and (max-width: 1000px) {
+    font-size: 13px;
+  }
 `

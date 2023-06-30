@@ -7,9 +7,9 @@ export const TrendingContainer = styled.div`
 `
 
 export const TrendingNavbar = styled.div`
-  height: 18vh;
-  padding-top: 30px;
-  padding-left: 50px;
+  height: 20vh;
+  padding-top: 10px;
+  padding-left: 30px;
   background-color: ${props => props.navBg};
   display: flex;
   flex-direction: column;
@@ -29,14 +29,20 @@ export const TrendingCard = styled.div`
 
 export const TrendingIcon = styled.div`
   background-color: ${props => props.iconBg};
-  padding: 25px;
+  padding: 15px;
   border-radius: 38px;
   margin-right: 30px;
+
+  @media screen and (max-width: 500px) {
+    padding: 10px;
+    margin-right: 10px;
+  }
 `
 
 export const TrendingHeading = styled.h1`
   color: ${props => props.color};
   font-family: 'Roboto';
+  font-size: 28px;
 
   @media screen and (max-width: 576px) {
     font-size: 25px;
@@ -46,14 +52,20 @@ export const TrendingHeading = styled.h1`
 export const TrendingVideoList = styled.ul`
   display: flex;
   flex-direction: column;
+  align-items: center;
   list-style-type: none;
-  margin-top: 50px;
-  margin-left: 30px;
-  padding-right: 20px;
+  padding-top: 50px;
+  margin-left: 40px;
+  padding-left: 40px;
   width: 100%;
 
   @media screen and (max-width: 776px) {
     margin-left: 0px;
+    padding-right: 20px;
+  }
+
+  @media screen and (max-width: 577px) {
+    padding-left: 20px;
   }
 `
 
@@ -61,6 +73,12 @@ export const TrendingList = styled.li`
   width: 80%;
   margin-bottom: 80px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 1000px) {
+    width: 95%;
+  }
 
   @media screen and (max-width: 576px) {
     width: 100%;
@@ -132,6 +150,10 @@ export const TrendingListHeading = styled.p`
   color: ${props => props.ListHeading};
   text-decoration: none;
 
+  @media screen and (max-width: 1000px) {
+    font-size: 18px;
+  }
+
   @media screen and (max-width: 576px) {
     font-size: 16px;
   }
@@ -145,8 +167,12 @@ export const TrendingPara = styled.p`
   text-decoration: none;
   margin-left: ${props => props.mll};
 
+  @media screen and (max-width: 1000px) {
+    font-size: 15px;
+  }
+
   @media screen and (max-width: 576px) {
-    font-size: 13px;
+    font-size: 12px;
     margin-left: ${props => props.ml};
   }
 `
